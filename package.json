@@ -1,0 +1,18 @@
+{
+  "name": "arcgis-js-api-widget-template",
+  "version": "0.1.0",
+  "description": "Want do develop your own widget for the ArcGIS JavaScript API 4.x? Avoid creating all the boilerplate by starting with this set of files. Edit",
+  "scripts": {
+    "postinstall": "tsc"
+  },
+  "author": "Gavin Rehkemper <gavin@gavinr.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/gavinr/arcgis-js-api-widget-template#readme",
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.4.0",
+    "dojo-typings": "^1.11.7",
+    "grunt": "^1.0.1",
+    "grunt-sass": "^2.0.0",
+    "typescript": "^2.4.2"
+  }
+}
