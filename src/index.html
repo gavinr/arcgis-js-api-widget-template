@@ -7,9 +7,17 @@
   <title>Create a custom widget - 4.4</title>
 
   <style>
+    html,
+    body,
+    #viewDiv {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
     .esri-hello-world {
       font-family: 'Helvetica Neue', sans-serif;
       display: inline-block;
+      background-color: white;
     }
     
     .esri-hello-world--emphasis {
@@ -26,15 +34,20 @@
       }
     ]
   };
-  </script>
+</script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
   <script src='https://js.arcgis.com/4.4/'></script>
   <script>
     var widget;
 
     require([
+      'esri/Map',
+      'esri/views/MapView',
       'app/HelloWorld',
       'dojo/domReady!'
     ], function(
+      Map,
+      MapView,
       HelloWorld
     ) {
 
@@ -66,8 +79,10 @@
       var widget = new HelloWorld({
         firstName: names[nameIndex].firstName,
         lastName: names[nameIndex].lastName,
-        container: 'widgetDiv'
+        // container: 'widgetDiv'
       });
+
+      view.ui.add(widget, "top-right");
 
       function changeName() {
         widget.set(names[++nameIndex % names.length]);
@@ -82,6 +97,6 @@
 </head>
 
 <body>
-  <div id='widgetDiv'></div>
+  <div id='viewDiv'></div>
 </body>
 </html>
