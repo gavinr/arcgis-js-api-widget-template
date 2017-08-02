@@ -1,16 +1,16 @@
 /// <amd-dependency path='esri/core/tsSupport/declareExtendsHelper' name='__extends' />
 /// <amd-dependency path='esri/core/tsSupport/decorateHelper' name='__decorate' />
 
-import { declared, property, subclass } from 'esri/core/accessorSupport/decorators'
+import { declared, property, subclass } from 'esri/core/accessorSupport/decorators';
 
-import Widget = require('esri/widgets/Widget')
+import Widget = require('esri/widgets/Widget');
 
-import { renderable, tsx } from 'esri/widgets/support/widget'
+import { renderable, tsx } from 'esri/widgets/support/widget';
 
 const CSS = {
   base: 'esri-hello-world',
   emphasis: 'esri-hello-world--emphasis'
-}
+};
 
 @subclass('esri.widgets.HelloWorld')
 class HelloWorld extends declared(Widget) {
@@ -27,7 +27,7 @@ class HelloWorld extends declared(Widget) {
 
   @property()
   @renderable()
-  public firstName: string = 'John'
+  public firstName: string = 'John';
 
   // ----------------------------------
   //  lastName
@@ -35,7 +35,7 @@ class HelloWorld extends declared(Widget) {
 
   @property()
   @renderable()
-  public lastName: string = 'Smith'
+  public lastName: string = 'Smith';
 
   // ----------------------------------
   //  emphasized
@@ -43,7 +43,7 @@ class HelloWorld extends declared(Widget) {
 
   @property()
   @renderable()
-  public emphasized: boolean = false
+  public emphasized: boolean = false;
 
   // --------------------------------------------------------------------------
   //
@@ -52,10 +52,10 @@ class HelloWorld extends declared(Widget) {
   // --------------------------------------------------------------------------
 
   public render () {
-    const greeting = this._getGreeting()
+    const greeting = this._getGreeting();
     const classes = {
       [CSS.emphasis]: this.emphasized
-    }
+    };
 
     return (
       <div bind={this}
@@ -63,7 +63,7 @@ class HelloWorld extends declared(Widget) {
            classes={classes}>
       {greeting}
       </div>
-    )
+    );
   }
 
   // --------------------------------------------------------------------------
@@ -73,9 +73,9 @@ class HelloWorld extends declared(Widget) {
   // --------------------------------------------------------------------------
 
   private _getGreeting (): string {
-    return `Hello, my name is ${this.firstName} ${this.lastName}!`
+    return `Hello, my name is ${this.firstName} ${this.lastName}!`;
   }
 
 }
 
-export = HelloWorld
+export = HelloWorld;

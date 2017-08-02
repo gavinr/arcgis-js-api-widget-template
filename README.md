@@ -3,7 +3,8 @@ Want do develop your own widget for the ArcGIS JavaScript API 4.x? Avoid creatin
 
 ## Goals of this repository:
 
-* Starts with the demo widget code from the [ArcGIS API for JavaScript Sample Code](https://developers.arcgis.com/javascript/latest/sample-code/widgets-custom-widget/index.html), but also includes:
+Starts with the demo widget code from the [ArcGIS API for JavaScript Sample Code](https://developers.arcgis.com/javascript/latest/sample-code/widgets-custom-widget/index.html), but also includes:
+
 * Places the widget within the context of a map.
 * Includes TSLint
 * Follows semi-standard code formatting

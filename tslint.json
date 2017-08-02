@@ -5,6 +5,8 @@
         "tslint-config-standard"
     ],
     "jsRules": {},
-    "rules": {},
+    "rules": {
+        "semicolon": [true, "always"]
+    },
     "rulesDirectory": []
 }
