@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Want do develop your own widget for the ArcGIS JavaScript API 4.x? Avoid creating all the boilerplate by starting with this set of files. Edit",
   "scripts": {
+    "start": "concurrently \"tsc -w\" \"ws -d src\"",
     "test": "tslint -c tslint.json 'src/**/*.ts*'",
     "postinstall": "tsc"
   },
@@ -14,8 +15,13 @@
     "dojo-typings": "^1.11.7",
     "grunt": "^1.0.1",
     "grunt-sass": "^2.0.0",
+    "local-web-server": "1.2.8",
     "tslint": "^5.5.0",
     "tslint-config-standard": "^6.0.1",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.2",
+    "concurrently": "^3.5.0"
+  },
+  "dependencies": {
+    
   }
 }
